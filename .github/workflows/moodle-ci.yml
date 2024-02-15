@@ -132,7 +132,7 @@ jobs:
       - name: PHPUnit tests
         if: ${{ always() }}
         run: |
-          cd moodle
+          # cd moodle
           # php -d pcov.enabled=1 -d pcov.directory=. vendor/bin/phpunit --coverage-text --configuration local/adler --testdox --coverage-clover local/adler/coverage.xml
           # restore tests are randomly causing segfaults when run with moodle-plugin-ci, but run totally fine when run with phpunit directly
           # https://github.com/moodlehq/moodle-plugin-ci/issues/204
